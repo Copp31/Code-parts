@@ -16,10 +16,9 @@ parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui,
 
 ## General Info
 
-Ce projet a été créé pour permettre de partager facilement les scripts de fonctions utilisées dans les projets clients Fastercom. 
+Ce projet a été créé pour permettre de partager facilement les scripts de fonctions utilisés dans les projets clients Fastercom. 
 
-Un autres buts étaient de permettre de tester ces fonctions.
-C'est possible en roulant runTests.js. Vous serez en mesure de voir le résultat de tous les tests dans la console.
+Il est aussi possible de tester les fonctions en roulant runTests.js. Vous serez en mesure de voir le résultat de tous les tests dans la console.
 
 Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
 
