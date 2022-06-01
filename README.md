@@ -1,7 +1,7 @@
-# FasterWeb functions and testing interface :computer:
+# :computer: FasterWeb functions and testing interface 
 > In this project, you will find a repository for FasterWeb script functions and a testing interface.
 
-## Table of Contents
+### Table of Contents
 * [General info](#general-info)
 * [Script functions]()
         * [location]()
@@ -17,7 +17,7 @@
         * [Step 3 : runTests()]()             
 
 
-## General Info
+### General Info
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
@@ -26,7 +26,7 @@ You will see the results of each test in the terminal.
 
 Each test needs to be written following a precise pattern and configuration.
 
-## Script functions :memo:
+## :memo: Script functions 
 ### Location
 
 All the script files are listed under folders named by function type (autofill, autohide, search, dev)
@@ -54,7 +54,7 @@ let array = [];
 ```
 
 
-## Use Testing comand-line interface :chart_with_upwards_trend:
+## :floppy_disk: Use Testing Comand-line interface :chart_with_upwards_trend:
 
 Each script can be tested while running runTests.js. 
 
@@ -84,7 +84,7 @@ This project is created with :
 * JavaScript : ES2020 
 
 
-### CLI
+### Command-line interface
 
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
@@ -118,7 +118,7 @@ Write function name : EasyName
 *Tricks: if you don't know this last info, start with option one. You will find the information that you're looking for*
 
 
-## Write a test 
+## :pencil2: Write a test 
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
@@ -179,5 +179,5 @@ That's it! You should be able to run the test that you just wrote in CLI running
 
 
 
-### Project status 
+### :construction: Project status 
 This project is in progress 
