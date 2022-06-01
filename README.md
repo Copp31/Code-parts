@@ -1,45 +1,43 @@
-
-Launch
-runTests.js
-test.js test.txt
-parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui, sous quel format ?
-
-
-# FasterWeb functions repository and testing interface
-> In this project, you will find repository for FasterWeb functions scripts and a testing interface.
+# FasterWeb functions and testing interface
+> In this project, you will find a repository for FasterWeb functions scripts and a testing interface.
 
 ## Table of Contents
 * [General info](#general-info)
+* [Functions script]()
 * [Technologies](#technologies)
 * [Setup test interface](#setup)
 
 
 ## General Info
 
-Ce projet a été créé pour permettre de partager facilement les scripts de fonctions utilisés dans les projets clients Fastercom. 
+The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
-Il est aussi possible de tester les fonctions en roulant runTests.js. Vous serez en mesure de voir le résultat de tous les tests dans la console.
+It's also possible to test all the functions or a precise one when you launch **runTests.js**. 
+You will see the results of each test in the terminal. 
 
-Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
+Each test needs to be written following a precise pattern and configuration.
 
+## Script functions
+### location
 
-## Scripts functions
-### Emplacement des scripts 
-Vous trouverez les fichiers scripts répertorié sous des dossiers nommés par type de fonctions (autofill, autohide, search).
+All the script files are listed under folders named by function type (autofill, autohide, search, dev)
+
 ```
 scripts / autofill
         / autohide 
         / search
 ```
 
-### Caractéristique des fichier scripts
-- Les scripts sont en format .txt 
 
-- Chaque fichier contient un script
+### Configuration of script files
 
-- Le nom doit être clair et en camelCase
+- Script files use the extension .txt
 
-- Écrire un court résumé de la fonction en //commentaire au début  chaque fichiers .txt
+- There's one script in each file
+
+- Name of the file is written in camelCase
+
+- There's a summary of the script at the beginning of each .txt file :
 
 ```
 // To get a clear summary of items when you have item's name and quantity
@@ -50,12 +48,13 @@ let array = [];
 ```
 
 
-## Les tests 
+## Test interface
 
-Chaque fonction.txt peut être testé grâce à l'interface de terminal runTests.js.
+Each script can be tested while running runTests.js. 
 
-Pour qu'un test fonctionne, il est important d'avoir un fichier.js dans un dossier miroir à celui des scripts. 
-        L'emplacement et le nom doivent être identique :
+- Be sure that your .txt and .js files are in the **right folder** to run a test.
+- It is also essential to use the **same name** for these 2 files.
+
 ```
 scripts / autofill
             /test.txt
@@ -68,7 +67,7 @@ tests   / autofill
         / search
 ```
 
-Important : le fichier.js doit être écrit selon le modèle EasyTest.js se trouvant dans le dossier /dev.
+**Important**: The js file will be written following the EayTest.js model in the /dev folder.
 
 
 ### Technologies
@@ -80,16 +79,19 @@ This project is created with :
 
 
 ### Setup test interface
-To run testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
+To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
 
-To launch a test, you need to run **runTests.js**
+To launch a test, you need to run **runTests.js** from the FWfunctions folder
 
 ```
 $ node runTests.js 
+
 ```
 
-## How to write a test
+## How to write a test U+1F916	
+
+
 Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
 
 modèle EasyTest : classe 
@@ -101,7 +103,7 @@ même nom scripts Js
 
 
 ### Code Examples
-
+parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui, sous quel format ?
 
 ### Project status 
 This project is in progress 
