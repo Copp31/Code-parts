@@ -68,7 +68,7 @@ tests   / autofill
         / search
 ```
 
-Important : le fichier.js doit être écrit selon le modèle nommé EasyTest.js
+Important : le fichier.js doit être écrit selon le modèle EasyTest.js se trouvant dans le dossier /dev.
 
 
 ## Technologies
@@ -76,11 +76,12 @@ This project is created with :
 
 * Node version : 16.15.0
 * NPM version : 8.5.5
-* JS : ES2020 
+* JavaScript : ES2020 
 
 
 ## Setup test interface
-To run testing interface, you need to install node and npm on your computer.
+To run testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
+
 
 To launch a test, you need to run runTests.js
 
