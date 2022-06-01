@@ -86,10 +86,9 @@ To launch a test, you need to run **runTests.js** from the FWfunctions folder
 
 ```
 $ node runTests.js 
-
 ```
 
-## How to write a test U+1F916	
+## How to write a test :microscope:
 
 
 Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
