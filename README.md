@@ -24,8 +24,8 @@ Pour les devs, vous pourrez écrire des tests pour chaque script de fonction sel
 
 
 ## Scripts functions
-### Emplacement des script 
-Vous trouverez les fichiers scripts divisés en dossier nommé par type de fonctions (autofill, autohide, search)
+### Emplacement des scripts 
+Vous trouverez les fichiers scripts repertorié sous des dossiers nommés par type de fonctions (autofill, autohide, search)
 ```
 scripts / autofill
         / autohide 
