@@ -17,6 +17,8 @@
         * [Step 3 : runTests()]()             
 
 
+
+
 ### General Info
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
@@ -25,6 +27,9 @@ It's also possible to test all the functions or a precise one when you launch **
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
+
+
+
 
 ## :memo: Script functions 
 ### Location
