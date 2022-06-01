@@ -25,7 +25,7 @@ Pour les devs, vous pourrez écrire des tests pour chaque script de fonction sel
 
 ## Scripts functions
 ### Emplacement des scripts 
-Vous trouverez les fichiers scripts repertorié sous des dossiers nommés par type de fonctions (autofill, autohide, search)
+Vous trouverez les fichiers scripts répertorié sous des dossiers nommés par type de fonctions (autofill, autohide, search).
 ```
 scripts / autofill
         / autohide 
@@ -39,7 +39,7 @@ scripts / autofill
 
 - Le nom doit être clair et en camelCase
 
-- Écrire un court résumé de la fonction en //commentaire au début des fichiers .txt
+- Écrire un court résumé de la fonction en //commentaire au début  chaque fichiers .txt
 
 ```
 // To get a clear summary of items when you have item's name and quantity
@@ -50,12 +50,12 @@ let array = [];
 ```
 
 
-### Les tests 
+## Les tests 
 
-Chaque fonction.txt peut être testé grace a l'interface de terminal runTests.js
+Chaque fonction.txt peut être testé grâce à l'interface de terminal runTests.js.
 
 Pour qu'un test fonctionne, il est important d'avoir un fichier.js dans un dossier miroir à celui des scripts. 
-        L'emplacement et le nom doivent être identique
+        L'emplacement et le nom doivent être identique :
 ```
 scripts / autofill
             /test.txt
