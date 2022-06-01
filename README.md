@@ -14,7 +14,7 @@ parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui,
 * [Setup test interface](#setup)
 
 
-## General Information
+## General Info
 
 Ce projet a été créé pour permettre de partager facilement les scripts de fonctions utilisées dans les projets clients Fastercom. 
 
@@ -24,18 +24,8 @@ C'est possible en roulant runTests.js. Vous serez en mesure de voir le résultat
 Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
 
 
-## Technologies
-This project is created with : 
-
-* Node version : 16.15.0
-* NPM version : 8.5.5
-* JS : ES2020 
-
 ## Scripts functions
-
-
-
-### Emplacement de script 
+### Emplacement des script 
 Vous trouverez les fichiers scripts divisés en dossier nommé par type de fonctions (autofill, autohide, search)
 ```
 scripts / autofill
@@ -43,13 +33,14 @@ scripts / autofill
         / search
 ```
 
-### Nommanclature
-Les scripts sont en format .txt 
-Chaque fichier contient un script
-Le nom doit être clair et en camelCase
+### Caractéristique des fichier scripts
+- Les scripts sont en format .txt 
 
-### summary
-Placer un court résumé de la fonction en //commentaire au début des fichiers .txt
+- Chaque fichier contient un script
+
+- Le nom doit être clair et en camelCase
+
+- Écrire un court résumé de la fonction en //commentaire au début des fichiers .txt
 
 ```
 // To get a clear summary of items when you have item's name and quantity
@@ -60,12 +51,33 @@ let array = [];
 ```
 
 
-## Scripts functions
+### Les tests 
 
-- comment utiliser l'interface
+Chaque fonction.txt peut être testé grace a l'interface de terminal runTests.js
+
+Pour qu'un test fonctionne, il est important d'avoir un fichier.js dans un dossier miroir à celui des scripts. 
+        L'emplacement et le nom doivent être identique
+```
+scripts / autofill
+            /test.txt
+        / autohide 
+        / search
+
+tests   / autofill
+            /test.js
+        / autohide 
+        / search
+```
+
+Important : le fichier.js doit être écrit selon le modèle nommé EasyTest.js
 
 
+## Technologies
+This project is created with : 
 
+* Node version : 16.15.0
+* NPM version : 8.5.5
+* JS : ES2020 
 
 
 ## Setup test interface
@@ -76,11 +88,12 @@ To launch a test, you need to run runTests.js
 ```
 $ node runTests.js 
 ```
-<!-- To launch a test, install it locally using npm: À MODIFIER -->
-
 
 ## How to write a test
 Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
+
+modèle EasyTest : classe 
+    changer type et classNameString
 
 ## nommanclature 
 test/ Tests
