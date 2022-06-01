@@ -122,7 +122,10 @@ Write function name : EasyName
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
-#### Step 1 : write the correct classNameString, type and class' name
+
+
+#### :one: Step 1 : write the correct classNameString, type and class' name
+
 The name of the .js test needs to be the same as the .txt script.
 The **classNameString** is the name of your .txt and .js file. The class name also needs to be the same. 
 
@@ -139,7 +142,9 @@ class EasyTest {
 
 As you can see, each function has its class. In this class, you can find all tests for a single script. 
 
-#### Step 2: write your tests
+
+
+#### :two: Step 2: write your tests
 
 The test follows the arrange, act, assert pattern. 
 
@@ -161,7 +166,9 @@ The test follows the arrange, act, assert pattern.
 
 In this example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
 
-#### Step 3 : runTests()
+
+
+#### :three: Step 3 : runTests()
 
 Finally, it's important to change the name of the class in rt.runTests() with the class name:
 ```
