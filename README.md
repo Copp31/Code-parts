@@ -71,7 +71,7 @@ tests   / autofill
 Important : le fichier.js doit être écrit selon le modèle EasyTest.js se trouvant dans le dossier /dev.
 
 
-## Technologies
+### Technologies
 This project is created with : 
 
 * Node version : 16.15.0
@@ -79,29 +79,29 @@ This project is created with :
 * JavaScript : ES2020 
 
 
-## Setup test interface
+### Setup test interface
 To run testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
 
-To launch a test, you need to run runTests.js
+To launch a test, you need to run **runTests.js**
 
 ```
 $ node runTests.js 
 ```
 
 ## How to write a test
-Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
+Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
 
 modèle EasyTest : classe 
     changer type et classNameString
 
-## nommanclature 
+### nommanclature 
 test/ Tests
 même nom scripts Js
 
 
-## Code Examples
+### Code Examples
 
 
-## Project status 
+### Project status 
 This project is in progress 
