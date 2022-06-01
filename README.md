@@ -32,11 +32,8 @@ scripts / autofill
 ### Configuration of script files
 
 - Script files use the extension .txt
-
 - There's one script in each file
-
 - Name of the file is written in camelCase
-
 - There's a summary of the script at the beginning of each .txt file :
 
 ```
