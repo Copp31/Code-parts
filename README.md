@@ -1,4 +1,4 @@
-# FasterWeb functions and testing interface
+# FasterWeb functions and testing interface :computer:
 > In this project, you will find a repository for FasterWeb functions scripts and a testing interface.
 
 ## Table of Contents
@@ -17,7 +17,7 @@ You will see the results of each test in the terminal.
 
 Each test needs to be written following a precise pattern and configuration.
 
-## Script functions
+## Script functions :memo:
 ### location
 
 All the script files are listed under folders named by function type (autofill, autohide, search, dev)
@@ -48,7 +48,7 @@ let array = [];
 ```
 
 
-## Test interface
+## Test interface :chart_with_upwards_trend:
 
 Each script can be tested while running runTests.js. 
 
@@ -88,7 +88,7 @@ To launch a test, you need to run **runTests.js** from the FWfunctions folder
 $ node runTests.js 
 ```
 
-## How to write a test :microscope:
+## How to write a test
 
 
 Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
