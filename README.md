@@ -1,5 +1,5 @@
 # FasterWeb functions and testing interface :computer:
-> In this project, you will find a repository for FasterWeb functions scripts and a testing interface.
+> In this project, you will find a repository for FasterWeb script functions and a testing interface.
 
 ## Table of Contents
 * [General info](#general-info)
@@ -81,15 +81,34 @@ This project is created with :
 ### Setup test interface
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
-
-To launch a test, you need to run **runTests.js** from the FWfunctions folder
+To launch tests, you need to run **runTests.js** from the FWfunctions folder.
 
 ```
 $ node runTests.js 
 ```
 
-## How to write a test
+You should see this in your terminal : 
 
+```
+--------------- tests interface ---------------
+
+1. Run all tests from all functions
+2. Run all tests from one specific function
+3. Exit test module
+
+
+What do you want to test (1, 2, 3)? 
+```
+
+If you want to run all tests from one specific function, you will be asked the function type (autofill, autohide, search, dev) and the function name :
+
+```
+Write Function Type : dev
+Write function name : EasyName
+```
+
+
+## How to write a test
 
 Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
 
