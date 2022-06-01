@@ -15,7 +15,6 @@ parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui,
 
 
 ## General Information
-This project 
 
 Ce projet a été créé pour permettre de partager facilement les scripts de fonctions utilisées dans les projets clients Fastercom. 
 
@@ -32,41 +31,41 @@ This project is created with :
 * NPM version : 8.5.5
 * JS : ES2020 
 
-## Standard de nomanclature & PLACEMENT FICHIER
+## Scripts functions
 
-Vous trouverez les fichiers scripts divisés en dossier nommé par type de fonctions.  
 
-Chaque fichier continient un script enregistré sous le format .txt
 
-Placer un courts summary de la fonction au début des fichiers .txt
+### Emplacement de script 
+Vous trouverez les fichiers scripts divisés en dossier nommé par type de fonctions (autofill, autohide, search)
+```
+scripts / autofill
+        / autohide 
+        / search
+```
 
+### Nommanclature
+Les scripts sont en format .txt 
+Chaque fichier contient un script
+Le nom doit être clair et en camelCase
+
+### summary
+Placer un court résumé de la fonction en //commentaire au début des fichiers .txt
 
 ```
-// summary : To get a clear summary of items when you have item's name and quantity
+// To get a clear summary of items when you have item's name and quantity
 
 let array = [];
 
-for (let item of (docData['Sièges'] || [] )) {
-    if (item['Sièges|2|Quantité'] && item['Sièges|1|Siège']){
-        array.push(item['Sièges|2|Quantité'] +' '+ item['Sièges|1|Siège'].substring(3));
-    }
-}
-return docData['Sièges'] ? { 'SiegeRésumé' : array.join('\n') } : undefined
-
+[...]
 ```
 
 
-
-test/ Tests
-même nom scripts Js
-dossier
-
 ## Scripts functions
 
-- Emplacement de script function dans ordi : path 
-- comment ils sont classés
 - comment utiliser l'interface
-- nommage : comment nommer et où placer le texte
+
+
+
 
 
 ## Setup test interface
@@ -82,6 +81,10 @@ $ node runTests.js
 
 ## How to write a test
 Pour les devs, vous pourrez écrire des tests pour chaque script de fonction selon un modèle précis. 
+
+## nommanclature 
+test/ Tests
+même nom scripts Js
 
 
 ## Code Examples
