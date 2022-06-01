@@ -12,7 +12,7 @@
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
-It's also possible to test all the functions or a precise one when you launch **runTests.js**. 
+It's also possible to test all the functions or a precise one when you launch **runTests.js** from the Command-line interface.
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
@@ -48,7 +48,7 @@ let array = [];
 ```
 
 
-## Test interface :chart_with_upwards_trend:
+## Testing interface :chart_with_upwards_trend:
 
 Each script can be tested while running runTests.js. 
 
@@ -78,10 +78,12 @@ This project is created with :
 * JavaScript : ES2020 
 
 
-### Setup test interface
+### Command-line interface
+
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
-To launch tests, you need to run **runTests.js** from the FWfunctions folder.
+To launch tests, you have to run **runTests.js** from the FWfunctions folder.
+
 
 ```
 $ node runTests.js 
@@ -100,7 +102,7 @@ You should see this in your terminal :
 What do you want to test (1, 2, 3)? 
 ```
 
-If you want to run all tests from one specific function, you will be asked the function type (autofill, autohide, search, dev) and the function name :
+If you want to run all tests from one specific function, you will be asked the function type (autofill, autohide, search, dev) and the function name:
 
 ```
 Write Function Type : dev
@@ -108,12 +110,28 @@ Write function name : EasyName
 ```
 
 
-## How to write a test
+## Write a test 
 
-Pour les devs, il est nécessaire de suivre un modèle précis pour écrire un test.
+If you write a test, it's necessary to follow the scripts/dev/EasyTest.js model.
 
-modèle EasyTest : classe 
-    changer type et classNameString
+The function **type** needs to be a string and the same name as the folder. It's essential because the path is related to it.
+
+The **classNameString** is the name of your .txt and .js file. The class name also need to be the same. 
+
+```
+let type = *"dev"*;
+let classNameString = *"EasyTest"*;
+let scriptPath = `./scripts/${type}/${classNameString}.txt`; 
+
+class *EasyTest* {
+  constructor(type, classNameString, scriptPath) {
+```
+
+As you can see, each function has its class. In this class, you will find every test for a single script. 
+
+
+
+
 
 ### nommanclature 
 test/ Tests
