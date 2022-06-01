@@ -109,34 +109,68 @@ Write function name : EasyName
 
 ## Write a test 
 
-If you write a test, it's necessary to follow the scripts/dev/EasyTest.js model.
+*If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
+
+The name of the .js test needs to be the same as the .txt script.
+The **classNameString** is the name of your .txt and .js file. The class name also needs to be the same. 
 
 The function **type** needs to be a string and the same name as the folder. It's essential because the path is related to it.
 
-The **classNameString** is the name of your .txt and .js file. The class name also need to be the same. 
-
 ```
-let type = *"dev"*;
-let classNameString = *"EasyTest"*;
+let type = "dev";
+let classNameString = "EasyTest";
 let scriptPath = `./scripts/${type}/${classNameString}.txt`; 
 
-class *EasyTest* {
+class EasyTest {
   constructor(type, classNameString, scriptPath) {
 ```
 
-As you can see, each function has its class. In this class, you will find every test for a single script. 
+As you can see, each function has its class. In this class, you can find all tests for a single script. 
 
+Here is an example of a test : 
 
+```
+  testNombreEntier(scriptPath, detail) {
+    // arrange
+    const docData = { test1: "2", test2: "3" };
+    // act
+    tstf.transformScriptToFunction(scriptPath, docData, detail);
+    // assert
+    af.assertFunction(tstf.result[0], 5);
+  }
 
+```
+- The title of each test needs to **start with "test"**, be clear, and be as precise as possible.
+- You need to **change the docData** depending on the information required in the script function. 
+- The **wanted result** needs to be written in the second argument of assertFunction(). 
 
+In this example, our docData is { test1: "2", test2: "3" }, and we want to assert if the result is 5. 
 
-### nommanclature 
-test/ Tests
-même nom scripts Js
+Finally, it's important to change the name of the class in rt.runTests() with the class name:
+```
+rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
+
+```
+
+That's it! You should be able to run the test that you just wrote in CLI running runTests.js !
 
 
 ### Code Examples
-parler des tests individuels : Avons-nous besoin de données d'entrée ? Si oui, sous quel format ?
+
+If you ask for detail in the CLI (command-line interface) you should see this :
+
+```
+Test: testNombreEntier
+Type: dev
+Function name: EasyTest
+
+DocData read  : { test1: '2', test2: '3' }
+
+Test pass
+Expected 5 got 5
+
+```
+
 
 ### Project status 
 This project is in progress 
