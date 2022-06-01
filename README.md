@@ -3,9 +3,18 @@
 
 ## Table of Contents
 * [General info](#general-info)
-* [Functions script]()
-* [Technologies](#technologies)
-* [Setup test interface](#setup)
+* [Script functions]()
+        * [location]()
+        * [Configuration of script files]()
+
+* [Use Testing comand-line interface]()
+        * [Technologies](#technologies)
+        * [CLI](#setup)
+
+* [Write a test]()
+        * [Step 1 : write the correct classNameString, type and class' name]()             
+        * [Step 2 : write your tests]()             
+        * [Step 3 : runTests()]()             
 
 
 ## General Info
@@ -18,7 +27,7 @@ You will see the results of each test in the terminal.
 Each test needs to be written following a precise pattern and configuration.
 
 ## Script functions :memo:
-### location
+### Location
 
 All the script files are listed under folders named by function type (autofill, autohide, search, dev)
 
@@ -37,7 +46,7 @@ scripts / autofill
 - There's a summary of the script at the beginning of each .txt file :
 
 ```
-// To get a clear summary of items when you have item's name and quantity
+// To get a clear summary of items when you have the item's name and quantity
 
 let array = [];
 
@@ -45,12 +54,12 @@ let array = [];
 ```
 
 
-## Testing interface :chart_with_upwards_trend:
+## Use Testing comand-line interface :chart_with_upwards_trend:
 
 Each script can be tested while running runTests.js. 
 
-- Be sure that your .txt and .js files are in the **right folder** to run a test.
-- It is also essential to use the **same name** for these 2 files.
+- Be sure that your .txt and .js files are in the **correct folder** to run a test.
+- It is also essential to use the **same name** for these two files.
 
 ```
 scripts / autofill
@@ -75,7 +84,7 @@ This project is created with :
 * JavaScript : ES2020 
 
 
-### Command-line interface
+### CLI
 
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
@@ -106,11 +115,14 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
+*Tricks: if you don't know this last info, start with option one. You will find the information that you're looking for*
+
 
 ## Write a test 
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
+#### Step 1 : write the correct classNameString, type and class' name
 The name of the .js test needs to be the same as the .txt script.
 The **classNameString** is the name of your .txt and .js file. The class name also needs to be the same. 
 
@@ -127,7 +139,9 @@ class EasyTest {
 
 As you can see, each function has its class. In this class, you can find all tests for a single script. 
 
-Here is an example of a test : 
+#### Step 2: write your tests
+
+The test follows the arrange, act, assert pattern. 
 
 ```
   testNombreEntier(scriptPath, detail) {
@@ -140,36 +154,22 @@ Here is an example of a test :
   }
 
 ```
+
 - The title of each test needs to **start with "test"**, be clear, and be as precise as possible.
 - You need to **change the docData** depending on the information required in the script function. 
 - The **wanted result** needs to be written in the second argument of assertFunction(). 
 
-In this example, our docData is { test1: "2", test2: "3" }, and we want to assert if the result is 5. 
+In this example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
+
+#### Step 3 : runTests()
 
 Finally, it's important to change the name of the class in rt.runTests() with the class name:
 ```
 rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
-
 ```
 
-That's it! You should be able to run the test that you just wrote in CLI running runTests.js !
+That's it! You should be able to run the test that you just wrote in CLI running **runTests.js**! :rainbow:
 
-
-### Code Examples
-
-If you ask for detail in the CLI (command-line interface) you should see this :
-
-```
-Test: testNombreEntier
-Type: dev
-Function name: EasyTest
-
-DocData read  : { test1: '2', test2: '3' }
-
-Test pass
-Expected 5 got 5
-
-```
 
 
 ### Project status 
