@@ -17,7 +17,8 @@
     3. [Step 3 : runTests()](#runtest)  
 
 
-
+ <hr />
+ 
 ### Introduction <a name="introduction"></a>
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
