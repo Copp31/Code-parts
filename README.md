@@ -189,7 +189,7 @@ rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 That's it! You should be able to run the test that you just wrote in CLI running **runTests.js**! :rainbow:
 
 
-### Empty template <a name="template"></a>
+### :round_pushpin: Empty template <a name="template"></a>
 
 Here's an empty template to begin writing your test.
 
