@@ -124,7 +124,7 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
-*Trick: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
+*:point_right: Trick: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
 
  <hr />
 
