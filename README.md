@@ -15,6 +15,7 @@
     1. [Step 1 : variable name](#variable-name)
     2. [Step 2 : test construction](#write)    
     3. [Step 3 : runTests()](#runtest)  
+    4. [Empty template](#template)  
 
 
  <hr />
@@ -45,12 +46,12 @@ scripts / autofill
 ### Script file configuration <a name="configuration"></a>
 
 - Script files use the extension .txt
-- There's one script in each file
-- Name of the file is written in camelCase
-- There's a summary of the script at the beginning of each .txt file :
+- Each script has its own .txt file
+- Title of each .txt file needs to start with a **capital letter**
+- Each script begins with a summary :
 
 ```
-// To get a clear summary of items when you have the item's name and quantity
+// This script render a clear summary of items when you have the item's name and quantity.
 
 let array = [];
 
@@ -59,12 +60,15 @@ let array = [];
 
  <hr />
 
+
+> The following section is for developers
+
 ## :chart_with_upwards_trend: Test with the comand-line interface <a name="testing-CLI"></a>
 
 Each script can be tested while running runTests.js. 
 
-- Be sure that your .txt and .js files are in the **correct folder** to run a test.
-- It is also essential to use the **same name** for these two files.
+- Be sure that your .txt and .js files are both there **mirror folder** to run a test.
+- It is essential to use the **same name** for these two files.
 
 ```
 scripts / autofill
@@ -78,7 +82,7 @@ tests   / autofill
         / search
 ```
 
-**Important**: The js file will be written following the EayTest.js model in the /dev folder.
+**Important**: The js file will be written following the EayTest.js model in the tests/dev folder.
 
 
 ### Technologies <a name="technologies"></a>
@@ -120,7 +124,7 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
-*Tricks: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
+*Trick: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
 
  <hr />
 
@@ -133,9 +137,11 @@ Write function name : EasyName
 #### :one: Step 1 : variable name <a name="variable"></a>
 
 The name of the .js test needs to be the same as the .txt script.
-The **classNameString** is the name of your .txt and .js file. The class name also needs to be the same. 
+The **classNameString** is the name of your .txt and .js file. That means that it needs to start with a **capital letter**.
 
-The function **type** needs to be a string and the same name as the folder. It's essential because the path is related to it.
+The function **type** needs to be the same name as the folder. It's essential because the path is related to it.
+
+ClassNameString and type are both strings.
 
 ```
 let type = "dev";
@@ -147,7 +153,6 @@ class EasyTest {
 ```
 
 As you can see, each function has its class. In this class, you can find all tests for a single script. 
-
 
 
 #### :two: Step 2: Test construction <a name="write"></a>
@@ -167,10 +172,10 @@ The test follows the arrange, act, assert pattern.
 ```
 
 - The title of each test needs to **start with "test"**, be clear, and be as precise as possible.
-- You need to **change the docData** depending on the information required in the script function. 
+- You need to **change the docData** depending on the information required in the script. 
 - The **wanted result** needs to be written in the second argument of assertFunction(). 
 
-In this example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
+In the previous example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
 
 
 
@@ -183,6 +188,43 @@ rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 
 That's it! You should be able to run the test that you just wrote in CLI running **runTests.js**! :rainbow:
 
+
+### Empty template <a name="template"></a>
+
+Here's an empty code to begin writing your test.
+
+```
+const tstf = require("../../utils/transformScriptToFunction.js");
+const af = require("../../utils/assertFunction.js");
+const rt = require("../../utils/run/runTests.js");
+let detail = process.argv[2];
+
+let type = "XXXTYPE";
+let classNameString = "XXXNAME";
+let scriptPath = `./scripts/${type}/${classNameString}.txt`;
+
+class XXXNAME {
+  constructor(type, classNameString, scriptPath) {
+    this.type = type;
+    this.classNameString = classNameString;
+    this.scriptPath = scriptPath;
+  }
+
+  testXXX(scriptPath, detail) {
+    // arrange
+    const docData = {XXXDOCDATA};
+    // act
+    tstf.transformScriptToFunction(scriptPath, docData, detail);
+    // assert
+    af.assertFunction(tstf.result[0], XXXWANTEDRESULT);
+  }
+}
+
+rt.runTests(XXXNAME, type, classNameString, scriptPath, detail);
+
+exports.XXXNAME = XXXNAME;
+
+```
 
 
 ### :construction: Project status <a name="statut"></a>
