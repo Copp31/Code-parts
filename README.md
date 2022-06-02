@@ -123,7 +123,7 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
-*:point_right: Trick: if you don't know the exact type and name of the function you want to test, start with option one. You will find the information that you need.*
+*:point_right: Trick: if you don't know the exact type and name of the function you want to test, start with option 1. You will find the information that you need.*
 
  <hr />
 
@@ -135,10 +135,11 @@ Write function name : EasyName
 
 #### :one: Step 1 : variable name <a name="variable"></a>
 
-The name of the .js test needs to be the same as the .txt script.
-The **classNameString** is the name of your .txt and .js file. That means that it needs to start with a **capital letter**.
+The **name** of the .js test needs to be the same as the **name** of the .txt script.
+It is also the name of your class, so it needs to start with a **capital letter**.
 
-The function **type** needs to be the same name as the folder. It's essential because the path is related to it.
+The function **type** needs to be the same name as the folder's name. 
+It's essential because the path is related to it.
 
 ClassNameString and type are both strings.
 
