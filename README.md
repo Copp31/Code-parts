@@ -7,13 +7,13 @@
     1. [Folder location](#folder-location)
     2. [Script files configuration](#configuration)
 
-3. [Testing comand-line interface](#testing-CLI)
+3. [Test with the comand-line interface (CLI)](#testing-CLI)
     1. [Technologies](#technologies)
     2. [CLI](#cli)
 
 4. [Write a test](#test)
     1. [Step 1 : variable name](#variable-name)
-    2. [Step 2 : write your tests](#write)    
+    2. [Step 2 : test construction](#write)    
     3. [Step 3 : runTests()](#runtest)  
 
 
@@ -58,7 +58,7 @@ let array = [];
 ```
 
 
-## :chart_with_upwards_trend: Testing Comand-line interface <a name="testing-CLI"></a>
+## :chart_with_upwards_trend: Test with the comand-line interface <a name="testing-CLI"></a>
 
 Each script can be tested while running runTests.js. 
 
@@ -148,7 +148,7 @@ As you can see, each function has its class. In this class, you can find all tes
 
 
 
-#### :two: Step 2: write your tests <a name="write"></a>
+#### :two: Step 2: Test construction <a name="write"></a>
 
 The test follows the arrange, act, assert pattern. 
 
