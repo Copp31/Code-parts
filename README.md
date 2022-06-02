@@ -12,11 +12,10 @@
     2. [CLI](#cli)
 
 4. [Write a test](#test)
-    1. [Step 1 : variable name](#variable-name)
+    1. [Step 1 : variable name](#variable)
     2. [Step 2 : test construction](#write)    
     3. [Step 3 : runTests()](#runtest)  
     4. [Empty template](#template)  
-
 
  <hr />
  
@@ -24,7 +23,7 @@
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
-It's also possible to test all the functions or a precise one when you launch **runTests.js** from the Command-line interface.
+For developers, it's also possible to test all the functions or a precise one when you launch **runTests.js** from the Command-line interface.
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
@@ -67,7 +66,7 @@ let array = [];
 
 Each script can be tested while running runTests.js. 
 
-- Be sure that your .txt and .js files are both there **mirror folder** to run a test.
+- Be sure that your .txt and .js files are both in the **mirror folder** of each other to run a test.
 - It is essential to use the **same name** for these two files.
 
 ```
