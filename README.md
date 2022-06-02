@@ -199,7 +199,7 @@ const af = require("../../utils/assertFunction.js");
 const rt = require("../../utils/run/runTests.js");
 let detail = process.argv[2];
 
-let type =<span style="color: red;">"XXXTYPE"</span>;
+let type = "XXXTYPE";
 let classNameString = "XXXNAME";
 let scriptPath = `./scripts/${type}/${classNameString}.txt`;
 
