@@ -28,8 +28,6 @@ You will see the results of each test in the terminal.
 Each test needs to be written following a precise pattern and configuration.
 
 
-
-
 ## :memo: Script functions <a name="script-function"></a>
 ### Folder location <a name="folder-location"></a>
 
@@ -119,7 +117,7 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
-*Tricks: if you don't know this last info, start with option one. You will find the information that you're looking for*
+*Tricks: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
 
 
 ## :pencil2: Write a test <a name="test"></a>
@@ -174,7 +172,7 @@ In this example, our docData is { test1: "2", test2: "3" } and we want to assert
 
 #### :three: Step 3 : runTests() <a name="runtest"></a>
 
-Finally, it's important to change the name of the class in rt.runTests() with the class name:
+Finally, it's essential to change the name of the class in rt.runTests() with the class name:
 ```
 rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 ```
