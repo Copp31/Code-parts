@@ -28,6 +28,7 @@ You will see the results of each test in the terminal.
 
 Each test needs to be written following a precise pattern and configuration.
 
+ <hr />
 
 ## :memo: Script functions <a name="script-function"></a>
 ### Folder location <a name="folder-location"></a>
@@ -56,6 +57,7 @@ let array = [];
 [...]
 ```
 
+ <hr />
 
 ## :chart_with_upwards_trend: Test with the comand-line interface <a name="testing-CLI"></a>
 
@@ -120,6 +122,7 @@ Write function name : EasyName
 
 *Tricks: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
 
+ <hr />
 
 ## :pencil2: Write a test <a name="test"></a>
 
