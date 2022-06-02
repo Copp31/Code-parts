@@ -186,7 +186,7 @@ Finally, it's essential to change the name of the class in rt.runTests() with th
 rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 ```
 
-That's it! You should be able to run the test that you just wrote in CLI running **runTests.js**! :rainbow:
+That's it! You should be able to run your test with **runTests.js**! :rainbow:
 
 
 ### :round_pushpin: Empty template <a name="template"></a>
