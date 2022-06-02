@@ -2,19 +2,19 @@
 > In this project, you will find a repository for FasterWeb script functions and a testing interface.
 
 ### Table of Contents
-* [General info](#general-info)
-* [Script functions]()
-        * [location]()
-        * [Configuration of script files]()
+- [General info](#general-info)
+- [Script functions]()
+        - [Folder location]()
+        - [Configuration of script files]()
 
-* [Use Testing comand-line interface]()
-        * [Technologies](#technologies)
-        * [CLI](#setup)
+- [Use Testing comand-line interface]()
+        - [Technologies](#technologies)
+        - [CLI](#setup)
 
-* [Write a test]()
-        * [Step 1 : write the correct classNameString, type and class' name]()             
-        * [Step 2 : write your tests]()             
-        * [Step 3 : runTests()]()             
+- [Write a test]()
+        - [Step 1 : write the correct classNameString, type and class' name]()             
+        - [Step 2 : write your tests]()             
+        - [Step 3 : runTests()]()             
 
 
 
@@ -32,7 +32,7 @@ Each test needs to be written following a precise pattern and configuration.
 
 
 ## :memo: Script functions 
-### Location
+### Folder location
 
 All the script files are listed under folders named by function type (autofill, autohide, search, dev)
 
@@ -59,7 +59,7 @@ let array = [];
 ```
 
 
-## :floppy_disk: Use Testing Comand-line interface :chart_with_upwards_trend:
+## :chart_with_upwards_trend: Use Testing Comand-line interface 
 
 Each script can be tested while running runTests.js. 
 
