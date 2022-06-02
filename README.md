@@ -191,7 +191,7 @@ That's it! You should be able to run the test that you just wrote in CLI running
 
 ### Empty template <a name="template"></a>
 
-Here's an empty code to begin writing your test.
+Here's an empty template to begin writing your test.
 
 ```
 const tstf = require("../../utils/transformScriptToFunction.js");
@@ -199,7 +199,7 @@ const af = require("../../utils/assertFunction.js");
 const rt = require("../../utils/run/runTests.js");
 let detail = process.argv[2];
 
-let type = "XXXTYPE";
+let type =<span style="color: red;">"XXXTYPE"</span>;
 let classNameString = "XXXNAME";
 let scriptPath = `./scripts/${type}/${classNameString}.txt`;
 
