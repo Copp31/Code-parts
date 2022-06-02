@@ -81,7 +81,7 @@ tests   / autofill
         / search
 ```
 
-**Important**: The js file will be written following the EayTest.js model in the tests/dev folder.
+**Important**: The .js file will be written following the EayTest.js model in the tests/dev folder.
 
 
 ### Technologies <a name="technologies"></a>
@@ -96,7 +96,7 @@ This project is created with :
 
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
-To launch tests, you have to run **runTests.js** from the FWfunctions folder.
+To launch tests, you have to run **runTests.js** from the **FWfunctions folder**.
 
 
 ```
@@ -106,7 +106,7 @@ $ node runTests.js
 You should see this in your terminal : 
 
 ```
---------------- tests interface ---------------
+--------------- testing interface ---------------
 
 1. Run all tests from all functions
 2. Run all tests from one specific function
@@ -123,7 +123,7 @@ Write Function Type : dev
 Write function name : EasyName
 ```
 
-*:point_right: Trick: if you don't know the exact type and name function that you want to test, start with option one. You will find the information that you need.*
+*:point_right: Trick: if you don't know the exact type and name of the function you want to test, start with option one. You will find the information that you need.*
 
  <hr />
 
