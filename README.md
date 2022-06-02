@@ -135,7 +135,7 @@ Write function name : EasyName
 
 #### :one: Step 1 : variable name <a name="variable"></a>
 
-The **name** of the .js test needs to be the same as the **name** of the .txt script.
+The **name** of the .js test needs to be the same as the **name** of the .txt script.<br>
 It is also the name of your class, so it needs to start with a **capital letter**.
 
 The function **type** needs to be the same name as the folder's name. 
