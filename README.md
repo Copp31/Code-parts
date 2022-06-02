@@ -2,41 +2,23 @@
 > In this project, you will find a repository for FasterWeb script functions and a testing interface.
 
 ### Table of Contents
-- [General info](#general-info)
-- [Script functions]()
-        - [Folder location]()
-        - [Configuration of script files]()
-
-- [Use Testing comand-line interface]()
-        - [Technologies](#technologies)
-        - [CLI](#setup)
-
-- [Write a test]()
-        - [Step 1 : write the correct classNameString, type and class' name]()             
-        - [Step 2 : write your tests]()             
-        - [Step 3 : runTests()]()             
-
-
-# Table of contents
 1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
-    1. [Sub paragraph](#subparagraph1)
-3. [Another paragraph](#paragraph2)
+2. [Script functions](#script-function)
+    1. [Folder location](#folder-location)
+    2. [Script files configuration](#configuration)
 
-## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
+3. [Testing comand-line interface](#testing-CLI)
+    1. [Technologies](#technologies)
+    2. [CLI](#cli)
 
-## Some paragraph <a name="paragraph1"></a>
-The first paragraph text
-
-### Sub paragraph <a name="subparagraph1"></a>
-This is a sub paragraph, formatted in heading 3 style
-
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+4. [Write a test](#test)
+    1. [Step 1 : variable name](#variable-name)
+    2. [Step 2 : write your tests](#write)    
+    3. [Step 3 : runTests()](#runtest)  
 
 
-### General Info
+
+### Introduction <a name="introduction"></a>
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
@@ -48,8 +30,8 @@ Each test needs to be written following a precise pattern and configuration.
 
 
 
-## :memo: Script functions 
-### Folder location
+## :memo: Script functions <a name="script-function"></a>
+### Folder location <a name="folder-location"></a>
 
 All the script files are listed under folders named by function type (autofill, autohide, search, dev)
 
@@ -60,7 +42,7 @@ scripts / autofill
 ```
 
 
-### Configuration of script files
+### Script file configuration <a name="configuration"></a>
 
 - Script files use the extension .txt
 - There's one script in each file
@@ -76,7 +58,7 @@ let array = [];
 ```
 
 
-## :chart_with_upwards_trend: Use Testing Comand-line interface 
+## :chart_with_upwards_trend: Testing Comand-line interface <a name="testing-CLI"></a>
 
 Each script can be tested while running runTests.js. 
 
@@ -98,7 +80,7 @@ tests   / autofill
 **Important**: The js file will be written following the EayTest.js model in the /dev folder.
 
 
-### Technologies
+### Technologies <a name="technologies"></a>
 This project is created with : 
 
 * Node version : 16.15.0
@@ -106,7 +88,7 @@ This project is created with :
 * JavaScript : ES2020 
 
 
-### Command-line interface
+### Command-line interface <a name="cli"></a>
 
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
@@ -140,13 +122,13 @@ Write function name : EasyName
 *Tricks: if you don't know this last info, start with option one. You will find the information that you're looking for*
 
 
-## :pencil2: Write a test 
+## :pencil2: Write a test <a name="test"></a>
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
 
 
-#### :one: Step 1 : write the correct classNameString, type and class' name
+#### :one: Step 1 : variable name <a name="variable"></a>
 
 The name of the .js test needs to be the same as the .txt script.
 The **classNameString** is the name of your .txt and .js file. The class name also needs to be the same. 
@@ -166,7 +148,7 @@ As you can see, each function has its class. In this class, you can find all tes
 
 
 
-#### :two: Step 2: write your tests
+#### :two: Step 2: write your tests <a name="write"></a>
 
 The test follows the arrange, act, assert pattern. 
 
@@ -190,7 +172,7 @@ In this example, our docData is { test1: "2", test2: "3" } and we want to assert
 
 
 
-#### :three: Step 3 : runTests()
+#### :three: Step 3 : runTests() <a name="runtest"></a>
 
 Finally, it's important to change the name of the class in rt.runTests() with the class name:
 ```
@@ -201,5 +183,5 @@ That's it! You should be able to run the test that you just wrote in CLI running
 
 
 
-### :construction: Project status 
+### :construction: Project status <a name="statut"></a>
 This project is in progress 
