@@ -61,7 +61,7 @@ let array = [];
 
 ### :star: How to use this repository <a name="repository"></a>
 
-You will be lucky if you find the script is what you need precisely. You will probably need to change at least the docData name to fit with yours. 
+You will be lucky if you find the script that you need precisely. You will probably need to change at least the docData's name to fit with yours. 
 
 The main idea of ​​this script repository is to create a library where you can get inspired and see more possibilities for your project. Some functions can be used as a starting template to help you write functions. 
 
