@@ -144,8 +144,10 @@ Write function name : EasyName
 <br>
 <hr />
 
-## :pencil2: Write a test <a name="test"></a>
 <br>
+
+## :pencil2: Write a test <a name="test"></a>
+
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
 
