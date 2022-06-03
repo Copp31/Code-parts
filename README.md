@@ -204,6 +204,9 @@ rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 
 That's it! You should be able to run your test with **runTests.js**! :rainbow:
 
+<br>
+<br>
+
 
 ### :round_pushpin: Empty template <a name="template"></a>
 
