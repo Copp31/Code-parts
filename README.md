@@ -71,6 +71,7 @@ We wish to add functions over time.
 
 Take a look at all the scripts! :dizzy:
 
+<br>
 
  <hr />
 
