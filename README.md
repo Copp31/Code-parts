@@ -15,7 +15,7 @@
 4. [Write a test](#test)
     1. [Step 1 : variable name](#variable)
     2. [Step 2 : test construction](#write)    
-    3. [Step 3 : runTests()](#runtest)  
+    3. [Step 3 : runClassTests()](#runtest)  
     4. [Empty template](#template)  
 
  <hr />
@@ -24,7 +24,7 @@
 <br>
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
-For developers, it's also possible to test all the functions or a specific one when you launch **runTests.js** from the command-line interface.
+For developers, it's also possible to test all the functions or a specific one when you launch **run.js** from the command-line interface.
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
@@ -78,7 +78,7 @@ Take a look at all the scripts! :dizzy:
 
 ## :chart_with_upwards_trend: Test with the command-line interface <a name="testing-CLI"></a>
 
-Each script can be tested while running runTests.js. 
+Each script can be tested while running run.js. 
 
 - Be sure that your .txt and .js files are both in the **mirror folder** of each other.
 - It is essential to use the **same name** for these two files.
@@ -112,11 +112,11 @@ This project is created with :
 
 To run the testing interface, you need to install [Node](https://nodejs.org/en/download/) on your computer.
 
-To launch tests, you have to run **runTests.js** from the **FWfunctions folder**.
+To launch tests, you have to run **run.js** from the **FWfunctions folder**.
 
 
 ```
-$ node runTests.js 
+$ node run.js 
 ```
 
 You should see this in your terminal : 
@@ -197,14 +197,14 @@ In the previous example, our docData is { test1: "2", test2: "3" } and we want t
 
 <br>
 
-#### :three: Step 3 : runTests() <a name="runtest"></a>
+#### :three: Step 3 : runClassTests() <a name="runtest"></a>
 
-Finally, it's essential to change the name of the class in rt.runTests() with the class name:
+Finally, it's essential to change the name of the class in rct.runClassTests() with the class name:
 ```
-rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
+rct.runClassTests(EasyTest, type, classNameString, scriptPath, detail);
 ```
 
-That's it! You should be able to run your test with **runTests.js**! :rainbow:
+That's it! You should be able to run your test with **run.js**! :rainbow:
 
 <br>
 
@@ -215,7 +215,7 @@ Here's an empty template to begin writing your test:
 ```
 const tstf = require("../../utils/transformScriptToFunction.js");
 const af = require("../../utils/assertFunction.js");
-const rt = require("../../utils/run/runTests.js");
+const rct = require("../../utils/run/runClassTests.js");
 let detail = process.argv[2];
 
 let type = "XXXtype";
@@ -239,7 +239,7 @@ class XXXclassName {
   }
 }
 
-rt.runTests(XXXclassName, type, classNameString, scriptPath, detail);
+rct.runClassTests(EasyTest, type, classNameString, scriptPath, detail);
 
 exports.XXXclassName = XXXclassName;
 
