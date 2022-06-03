@@ -191,7 +191,7 @@ That's it! You should be able to run your test with **runTests.js**! :rainbow:
 
 ### :round_pushpin: Empty template <a name="template"></a>
 
-Here's an empty template to begin writing your test.
+Here's an empty template to begin writing your test:
 
 ```
 const tstf = require("../../utils/transformScriptToFunction.js");
