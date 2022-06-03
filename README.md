@@ -138,9 +138,9 @@ If you want to run all tests from one specific function, you will be asked the f
 Write Function Type : dev
 Write function name : EasyName
 ```
-
+<br>
 *:point_right: Trick: if you don't know the exact type and name of the function you want to test, start with option 1. You will find the information that you need.*
-
+<br>
  <hr />
 
 ## :pencil2: Write a test <a name="test"></a>
