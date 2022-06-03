@@ -6,8 +6,9 @@
 2. [Script functions](#script-function)
     1. [Folder location](#folder-location)
     2. [Script files configuration](#configuration)
+    2. [How to use this repository](#repository)
 
-3. [Test with the comand-line interface (CLI)](#testing-CLI)
+3. [Test with the command-line interface (CLI)](#testing-CLI)
     1. [Technologies](#technologies)
     2. [CLI](#cli)
 
@@ -23,7 +24,7 @@
 
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
-For developers, it's also possible to test all the functions or a precise one when you launch **runTests.js** from the Command-line interface.
+For developers, it's also possible to test all the functions or a specific one when you launch **runTests.js** from the command-line interface.
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
@@ -33,7 +34,7 @@ Each test needs to be written following a precise pattern and configuration.
 ## :memo: Script functions <a name="script-function"></a>
 ### Folder location <a name="folder-location"></a>
 
-All the script files are listed under folders named by function type (autofill, autohide, search, dev)
+All the script files are listed under folders named by function type (autofill, autohide, search, dev).
 
 ```
 scripts / autofill
@@ -50,23 +51,37 @@ scripts / autofill
 - Each script begins with a summary :
 
 ```
-// This script render a clear summary of items when you have the item's name and quantity.
+// This script return a clear summary of items when you have the item's name and quantity.
 
 let array = [];
 
 [...]
 ```
 
+
+### How to use this repository <a name="repository"></a>
+
+You will be lucky if you find the script is what you need precisely. You will probably need to change at least the docData name to fit with yours. :star:
+
+The main idea of ​​this script repository is to create a library where you can get inspired and see more possibilities for your project. Some functions can be used as a starting template to help you write functions. 
+
+We want to share various scripts to facilitate sharing information.
+
+We wish to add functions over time. 
+
+Take a look at all the scripts! :dizzy:
+
+
  <hr />
 
 
 > The following section is for developers
 
-## :chart_with_upwards_trend: Test with the comand-line interface <a name="testing-CLI"></a>
+## :chart_with_upwards_trend: Test with the command-line interface <a name="testing-CLI"></a>
 
 Each script can be tested while running runTests.js. 
 
-- Be sure that your .txt and .js files are both in the **mirror folder** of each other to run a test.
+- Be sure that your .txt and .js files are both in the **mirror folder** of each other.
 - It is essential to use the **same name** for these two files.
 
 ```
@@ -168,11 +183,10 @@ The test follows the arrange, act, assert pattern.
     // assert
     af.assertFunction(tstf.result[0], 5);
   }
-
 ```
 
 - The title of each test needs to **start with "test"**, be clear, and be as precise as possible.
-- You need to **change the docData** depending on the information required in the script. 
+- You need to **add the docData** depending on the information required in the script. 
 - The **wanted result** needs to be written in the second argument of assertFunction(). 
 
 In the previous example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
@@ -199,11 +213,11 @@ const af = require("../../utils/assertFunction.js");
 const rt = require("../../utils/run/runTests.js");
 let detail = process.argv[2];
 
-let type = "XXXTYPE";
-let classNameString = "XXXNAME";
+let type = "XXXtype";
+let classNameString = "XXXclassName";
 let scriptPath = `./scripts/${type}/${classNameString}.txt`;
 
-class XXXNAME {
+class XXXclassName {
   constructor(type, classNameString, scriptPath) {
     this.type = type;
     this.classNameString = classNameString;
@@ -216,13 +230,13 @@ class XXXNAME {
     // act
     tstf.transformScriptToFunction(scriptPath, docData, detail);
     // assert
-    af.assertFunction(tstf.result[0], XXXWANTEDRESULT);
+    af.assertFunction(tstf.result[0], XXXwantedResult);
   }
 }
 
-rt.runTests(XXXNAME, type, classNameString, scriptPath, detail);
+rt.runTests(XXXclassName, type, classNameString, scriptPath, detail);
 
-exports.XXXNAME = XXXNAME;
+exports.XXXclassName = XXXclassName;
 
 ```
 
