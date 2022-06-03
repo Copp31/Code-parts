@@ -61,20 +61,16 @@ let array = [];
 
 ### :star: How to use this repository <a name="repository"></a>
 
-You will be lucky if you find the script that you need precisely. You will probably need to change at least the docData's name to fit with yours. 
+You will be lucky to find the script you are looking for exactly. You will probably need to change at least the docData's name to fit yours. 
 
 The main idea of ​​this script repository is to create a library where you can get inspired and see more possibilities for your project. Some functions can be used as a starting template to help you write functions. 
 
-We want to share various scripts to facilitate sharing information.
-
-We wish to add functions over time. 
+We want to facilitate sharing information, so we will undoubtedly add more script functions over time. 
 
 Take a look at all the scripts! :dizzy:
 
 <br>
-
- <hr />
-
+<hr/>
 
 > The following section is for developers
 
@@ -140,16 +136,14 @@ Write function name : EasyName
 ```
 <br>
 
-:point_right: *Trick: if you don't know the exact type and name of the function you want to test, start with option 1. You will find the information that you need.*
+:point_right: *Trick: if you don't know the exact **type** and **name** of the function you want to test, start with option 1. You will find the information that you need.*
 <br>
 <hr />
-
 <br>
 
 ## :pencil2: Write a test <a name="test"></a>
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
-
 
 
 #### :one: Step 1 : variable name <a name="variable"></a>
