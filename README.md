@@ -19,18 +19,18 @@
     4. [Empty template](#template)  
 
  <hr />
- 
+ <br>
 ### Introduction <a name="introduction"></a>
-
+<br>
 The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
 
 For developers, it's also possible to test all the functions or a specific one when you launch **runTests.js** from the command-line interface.
 You will see the results of each test in the terminal. 
 
 Each test needs to be written following a precise pattern and configuration.
-
+<br>
  <hr />
-
+<br>
 ## :memo: Script functions <a name="script-function"></a>
 ### Folder location <a name="folder-location"></a>
 
@@ -42,6 +42,7 @@ scripts / autofill
         / search
 ```
 
+<br>
 
 ### Script file configuration <a name="configuration"></a>
 
@@ -57,7 +58,7 @@ let array = [];
 
 [...]
 ```
-
+<br>
 
 ### :star: How to use this repository <a name="repository"></a>
 
@@ -73,6 +74,7 @@ Take a look at all the scripts! :dizzy:
 <hr/>
 
 > The following section is for developers
+<br>
 
 ## :chart_with_upwards_trend: Test with the command-line interface <a name="testing-CLI"></a>
 
@@ -95,6 +97,7 @@ tests   / autofill
 
 **Important**: The .js file will be written following the EayTest.js model in the tests/dev folder.
 
+<br>
 
 ### Technologies <a name="technologies"></a>
 This project is created with : 
@@ -103,6 +106,7 @@ This project is created with :
 * NPM version : 8.5.5
 * JavaScript : ES2020 
 
+<br>
 
 ### Command-line interface <a name="cli"></a>
 
@@ -145,6 +149,7 @@ Write function name : EasyName
 
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
+<br>
 
 #### :one: Step 1 : variable name <a name="variable"></a>
 
@@ -167,6 +172,7 @@ class EasyTest {
 
 As you can see, each function has its class. In this class, you can find all tests for a single script. 
 
+<br>
 
 #### :two: Step 2: Test construction <a name="write"></a>
 
@@ -189,7 +195,7 @@ The test follows the arrange, act, assert pattern.
 
 In the previous example, our docData is { test1: "2", test2: "3" } and we want to assert if the result is 5. 
 
-
+<br>
 
 #### :three: Step 3 : runTests() <a name="runtest"></a>
 
@@ -240,5 +246,6 @@ exports.XXXclassName = XXXclassName;
 ```
 
 <br>
+
 ### :construction: Project status <a name="statut"></a>
 This project is in progress 
