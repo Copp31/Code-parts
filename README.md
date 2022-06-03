@@ -142,10 +142,10 @@ Write function name : EasyName
 
 :point_right: *Trick: if you don't know the exact type and name of the function you want to test, start with option 1. You will find the information that you need.*
 <br>
- <hr />
+<hr />
 
 ## :pencil2: Write a test <a name="test"></a>
-
+<br>
 *If you write a test, it's essential to follow the scripts/dev/EasyTest.js model.*
 
 
@@ -205,8 +205,6 @@ rt.runTests(EasyTest, type, classNameString, scriptPath, detail);
 That's it! You should be able to run your test with **runTests.js**! :rainbow:
 
 <br>
-<br>
-
 
 ### :round_pushpin: Empty template <a name="template"></a>
 
@@ -245,6 +243,6 @@ exports.XXXclassName = XXXclassName;
 
 ```
 
-
+<br>
 ### :construction: Project status <a name="statut"></a>
 This project is in progress 
