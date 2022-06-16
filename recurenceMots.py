@@ -1,3 +1,8 @@
+# This program will give you the occurrence of each word in your text. 
+# Put all the text you want to analyze in the same folder and name it sample.txt.
+
+# run in your powershell :           py recurrenceMots.py
+
 import string 
   
 text = open("sample.txt", "r") 
