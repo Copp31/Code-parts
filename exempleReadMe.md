@@ -1,5 +1,5 @@
-# :computer: FasterWeb functions and testing interface 
-> In this project, you will find a repository for FasterWeb script functions and a testing interface.
+# :computer: Project for functions and testing interface 
+> In this project, you will find a repository for script functions and a testing interface.
 
 ### Table of Contents
 1. [Introduction](#introduction)
@@ -22,7 +22,7 @@
  <br>
 ### Introduction <a name="introduction"></a>
 <br>
-The purpose of this project is to be able to easily **share the script functions** used in Fastercom's client projects. 
+The purpose of this project is to be able to easily **share script functions** used in client projects. 
 
 For developers, it's also possible to test all the functions or a specific one when you launch **run.js** from the command-line interface.
 You will see the results of each test in the terminal. 
