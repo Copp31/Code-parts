@@ -1,8 +1,3 @@
-# This program will give you the number of times each word is in your text. 
-# Drag the text you want to analyze in this folder and name it yourtxt.txt.
-
-# run in your powershell : py wordOccurence.py
-
 import string 
   
 text = open("yourtxt.txt", "r") 
