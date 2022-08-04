@@ -1,4 +1,4 @@
-## :computer: Word occurence algorithm
+## :snake: Word occurence algorithm
 
 > This program will give you the number of times each word appear in a text. 
 
@@ -8,11 +8,10 @@ They wanted to know the amount of times each word were wrotten in their gallery 
 
 ### How it works
 
-- Drag the text you want to analyze in this folder and name it yourtxt.txt.
+- Drag the text you want to analyze in this folder and name it **text.txt**.
 
 - Go in this folder and run in your commande line : 
 ```
 py wordOccurence.py
-
 ```
 
