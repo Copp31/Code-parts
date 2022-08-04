@@ -1,4 +1,4 @@
-# Python projects
+# :axe: Python projects
 
 Here you will find some of my Python work. I've mixed algorithms and Internet of things.
 
