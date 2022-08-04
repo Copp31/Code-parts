@@ -1,14 +1,23 @@
-import string 
+import unidecode
   
-text = open("yourtxt.txt", "r") 
+text = open("./text.txt", "r") 
+textData = open('./textData.txt', 'w')
 d = dict() 
   
 for line in text: 
     
     line = line.strip() 
     line = line.lower() 
-    line = line.translate(line.maketrans("", "", string.punctuation)) 
-  
+    line = unidecode.unidecode(line)
+
+    specialChars = "!#$%^&?*():;/><." 
+
+    for specialChar in specialChars:
+        line = line.replace(specialChar, '')
+
+    line = line.replace(',', ' ')
+    line = line.replace('\'', '\' ')
+
     words = line.split(" ") 
   
     for word in words: 
@@ -17,8 +26,11 @@ for line in text:
         else: 
             d[word] = 1
   
-    for key in list(d.keys()): 
-        print(key, ":", d[key]) 
 
 for k, v in sorted(d.items(), key=lambda x: x[1]):
     print("%s: %s" % (k, v))
+    data = "%s: %s" % (k, v)
+
+    textData.write(data + '\n')
+
+
