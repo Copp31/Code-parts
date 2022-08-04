@@ -1,0 +1,55 @@
+{% extends "layout.html" %} {% block content %}
+
+<!-- Barre de navigation secondaire -->
+<nav class="nav nav-pills flex-column flex-sm-row your_nav_class">
+    <a class="flex-sm-fill text-sm-center nav-link active" href="#">Général</a>
+    <a class="flex-sm-fill text-sm-center nav-link " href="#">Par plante</a>
+</nav>
+
+<h1>Configurations</h1>
+<div style="overflow-x:auto;">
+    <form method="post">
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Plante 1</label>
+            <input type="text" name="plante1" class="form-control" id="formGroupExampleInput" value= {{ user_data.plantes.0 }}>
+            <input type="text" name="plante1-heure" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.debut.0 }}>
+            <input type="text" name="plante1-duree" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.duree.0 }}>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Plante 2</label>
+            <input type="text" name="plante2" class="form-control" id="formGroupExampleInput2" value={{ user_data.plantes.1 }}>
+            <input type="text" name="plante2-heure" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.debut.1 }}>
+            <input type="text" name="plante2-duree" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.duree.1 }}>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label">Plante 3</label>
+            <input type="text" name="plante3" class="form-control" id="formGroupExampleInput3" value={{ user_data.plantes.2 }}>
+            <input type="text" name="plante3-heure" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.debut.2 }}>
+            <input type="text" name="plante3-duree" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.duree.2 }}>
+        </div>
+
+
+
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Plante 4</label>
+            <input type="text" name="plante4" class="form-control" id="formGroupExampleInput4" value={{ user_data.plantes.3 }}>
+            <input type="text" name="plante4-heure" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.debut.3 }}>
+            <input type="text" name="plante4-duree" class="form-control" id="formGroupExampleInput" value= {{ user_data.auto_journalier.duree.3 }}>
+        </div>
+
+
+
+
+
+
+
+        <div class="mb-3">
+            <input type="submit" class="btn btn-primary" value="Sauvegarder"/>
+        </div>
+    </form>
+</div>
+{% endblock %}

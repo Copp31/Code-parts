@@ -1,0 +1,149 @@
+/* CSS */
+
+
+/* COPP CSS */
+
+body {
+    background-color: #a1c4fd;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-family: 'Ubuntu', sans-serif, Bold 700;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.TitrePlante {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 66px;
+}
+
+.imagePlante {
+    width: 80%;
+    max-width: 500px;
+    text-align: center;
+    margin: auto;
+    display: flex;
+    border-radius: 70px;
+    position: relative;
+    padding-top: 10px;
+}
+
+.boutonsPlante {
+    flex-direction: row;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#chart_div {
+    display: flex;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    padding-left: 10px;
+}
+
+#curve_graphe {
+    text-align: center;
+    margin: auto;
+    display: flex;
+}
+
+
+/* FIN COPP */
+
+.flex-container {
+    display: flex;
+    /* background-color: black; */
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.plante {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    background: lightsteelblue;
+    align-items: center;
+    margin-right: 20px;
+    border: 2px solid black;
+    border-radius: 7px
+}
+
+
+/* css gaue page index */
+
+.gauge {
+    width: 15%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+
+/* css gaue page index */
+
+.gauge {
+    width: 15%;
+    max-width: 250px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2vw;
+    color: white;
+}
+
+.gauge__body {
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: cadetblue;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+}
+
+.gauge__fill {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: green;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover {
+    width: 75%;
+    height: 150%;
+    background: lightsteelblue;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+
+}
+
+
+@media (max-width: 576px ) {
+.currentLocation {
+display: none;
+}
+
+}

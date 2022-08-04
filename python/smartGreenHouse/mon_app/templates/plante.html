@@ -1,0 +1,217 @@
+<!-- Template pour page individuelle -->
+
+{% extends "layout.html" %} {% block content %}
+
+
+<h1>{{ user_data.plantes[id-1] }}</h1>
+<p id="label-auto"></p>
+<img class='imagePlante' src="{{url_for('static', filename='images/Icone_Normal_2.png')}}" alt="icone_normal_1">
+
+<div action="#" class="boutonsPlante">
+<!--        <button id="OnOff" type="button" name="action0" onclick="OnOff()">Button</button>-->
+        <input id="btn-start" class="btn btn-primary" type="button" value="Arroser" onclick="send_cmd({{ id }}1)" style="width:120px;"/>
+        <input id="btn-stop" class="btn btn-primary" type="button" value="Arreter" onclick="send_cmd({{ id }}0)" style="width:120px;background:red;"/>
+        <form method="post">
+                <input name="etat" id="btn-auto" class="btn btn-primary" type="submit" value="Activer Auto" action="updateButtonAuto()" style="width:120px;background:red;"/>
+        </form>
+<!--    <a class="btn btn-primary" id="On" href="http://127.0.0.1:5000/arduino/cmd/{{ id }}1">Arroser</a>-->
+<!--    <a class="btn btn-primary" id="Off" href="http://127.0.0.1:5000/arduino/cmd/{{ id }}0">Arreter</a>-->
+<!--    <button type="button" class="btn btn-success">Mode automatique</button>-->
+</div>
+
+<div id="chart_div" style="width: 400px; height: 120px;"></div>
+<div id="curve_graphe" style="width: 400px; height: 00px"></div>
+
+
+
+
+
+
+<!-- SECTION SCRIPT -->
+
+<!--Script necessaire pour loader les scripts de google visualisation-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// <!--Constantes et variables-->
+
+    let label_auto = document.getElementById("label-auto")
+    let btn_auto = document.getElementById("btn-auto")
+    let etat = {{ etat_pompe }}
+    let id = {{ id }}
+    let temperature = {{ temperature }}
+    let humidite = {{ humidite }}
+    let mode = ""
+    let etat_string = ""
+    
+    function updateButtonAuto() {
+        mode = {{ user_data.auto_journalier.auto[id-1] }}
+        console.log(mode)
+        if (mode == 0) {
+            console.log("auto OFF")
+            btn_auto.value = "Activer Auto"
+        } else {
+            console.log("auto ON")
+            etat_string = {{ user_data.auto_journalier.debut[id-1] }};{{ user_data.auto_journalier.duree[id-1] }}
+            label_auto.innerHTML = etat_string
+            btn_auto.value = "Désactiver Auto"
+        }
+    }
+    updateButtonAuto()
+
+
+
+// <!--&lt;!&ndash;Fonction pour l'affichage d'un bouton dynamique&ndash;&gt;-->
+<!--    function updateButtonAuto() {-->
+<!--        mode = {{ user_data.auto_journalier[id-1] }}-->
+<!--        if (mode == False){-->
+<!--            btn_auto.innerHTML = "Auto Off"-->
+<!--        } else {-->
+<!--            btn_auto.innerHTML = "Auto On"-->
+<!--            label_auto.innerHTML = {{ user_data.auto_journalier.auto.id }}-->
+<!--        }-->
+<!--    }-->
+
+
+// <!--Fonction pour l'envoie de commandes-->
+    function send_cmd(cmd) {
+        console.log(cmd)
+        let url = "http://127.0.0.1:5000/arduino/cmd/"+cmd
+        fetch(url).then(response => {
+<!--                    console.log("response")-->
+                    console.log(response)
+                })
+                .catch(error => {
+                    console.log("error")
+                    console.log(error)
+                });
+        }
+
+
+// <!--Fetch l'état du arduino-->
+    function getArduinoData() {
+        let url = "http://127.0.0.1:5000/arduino/data"
+        arduino_data = fetch(url).then(function (response) {
+            try {
+                let data = response.json();
+                return data;
+                }
+            catch (error) {
+                console.log("error")
+                console.log(error)
+                }
+            }).then(function(data) {
+                etat = data.pompes[id-1]
+                humidite = data.humidite[id-1]
+                temperature = data.temperature
+            });
+<!--            updateButton()-->
+    }
+    getArduinoData()
+
+// <!--Affichage les gauges d'humidité et de temperature-->
+    google.charts.load('current', {
+        'packages': ['gauge']
+    });
+    google.charts.setOnLoadCallback(drawGauges);
+
+    function drawGauges() {
+
+        var data = google.visualization.arrayToDataTable([
+            ['Label', 'Value'],
+            ['Humidité', humidite],
+            ['Température', temperature],
+            ['Réservoir', 0],
+        ]);
+
+        var options = {
+            width: 380,
+            height: 120,
+            redFrom: 90,
+            redTo: 100,
+            yellowFrom: 75,
+            yellowTo: 90,
+            minorTicks: 5
+        };
+
+        var chart = new google.visualization.Gauge(document.getElementById('chart_div'));
+        chart.draw(data, options);
+
+        setInterval(function() {
+            data.setValue(0, 1, humidite);
+            chart.draw(data, options);
+        }, 15000);
+        setInterval(function() {
+            data.setValue(1, 1, temperature);
+            chart.draw(data, options);
+        }, 15000);
+        setInterval(function() {
+            getArduinoData();
+        }, 10000);
+
+<!--        var test = document.getElementsByClassName('#chart-div');-->
+<!--        console.log(test)-->
+<!--        var tab = document.getElementById('curve_graphe')-->
+<!--        tab.style.margin = "auto";-->
+    }
+
+
+// <!-- Script pour graphique temps & humidité -->
+    google.charts.load('current', {
+        'packages': ['corechart']
+    });
+    google.charts.setOnLoadCallback(drawChart);
+
+    let liste = [['date', 'humidité']]
+    let _hum = 0
+    let _time = 0
+
+    {% for item in db_data %}
+
+            _hum = {{ item.humidite }}
+            _humX = _hum[{{ id }} - 1]
+            _minute = {{ item.date.minute }}
+            _timestamp = {{ item.date.hour }}.{{ item.date.minute }}
+
+            if (_minute == 0 || _minute == 15 || _minute == 30 || _minute == 45) {
+                if (liste.length < 97) {
+                        liste.push([ _timestamp, _humX ])
+                    }
+                }
+
+    {% endfor %}
+
+    console.log(liste);
+
+    function drawChart() {
+        // Set Data
+
+        var data = google.visualization.arrayToDataTable(liste);
+
+        // Set Options
+        var options = {
+            /*             title: 'Humidité', */
+            hAxis: {
+                title: '24 heures'
+            },
+            vAxis: {
+<!--                title: 'Humidité'-->
+            },
+            curveType: 'function',
+            legend: 'none',
+            lineWidth: 5,
+            colors: ['#a52714'],
+            backgroundColor: {
+                fill: 'transparent'
+            },
+            width: 380
+
+        };
+        // Draw Chart
+        var chart = new google.visualization.LineChart(document.getElementById('curve_graphe'));
+        chart.draw(data, options);
+    }
+</script>
+
+
+
+{% endblock %}

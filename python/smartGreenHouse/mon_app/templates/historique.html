@@ -1,0 +1,44 @@
+{% extends "layout.html" %} {% block content %}
+
+<!-- Barre de navigation secondaire -->
+<nav class="nav nav-pills flex-column flex-sm-row your_nav_class">
+    <a class="flex-sm-fill text-sm-center nav-link active" href="#">Général</a>
+    <a class="flex-sm-fill text-sm-center nav-link " href="#">Par plante</a>
+</nav>
+
+<h1>Historique général</h1>
+<div style="overflow-x:auto;">
+    <table class="table table-dark table-hover" id="tableau">
+        <thead class="table-light">
+        <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Temp</th>
+            <th scope="col">Hum1</th>
+            <th scope="col">Hum2</th>
+            <th scope="col">Hum3</th>
+            <th scope="col">Hum4</th>
+            <th scope="col">Pomp1</th>
+            <th scope="col">Pomp2</th>
+            <th scope="col">Pomp3</th>
+            <th scope="col">Pomp4</th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for item in arduino_data %}
+                </tr>
+                    <td scope="row">{{ item.date }}</td>
+                    <td>{{ item.temperature }}</td>
+                    <td>{{ item.humidite.0 }}</td>
+                    <td>{{ item.humidite.1 }}</td>
+                    <td>{{ item.humidite.2 }}</td>
+                    <td>{{ item.humidite.3 }}</td>
+                    <td>{{ item.pompes.0 }}</td>
+                    <td>{{ item.pompes.1 }}</td>
+                    <td>{{ item.pompes.2 }}</td>
+                    <td>{{ item.pompes.3 }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

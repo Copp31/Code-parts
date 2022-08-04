@@ -1,0 +1,70 @@
+{% extends "layout.html" %} {% block content %}
+<div class="flex-container">
+    <div class="plante">
+        <div class="gauge" id="g1">Humidité
+            <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+            </div>
+        </div>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/plante/1" style="width:220px;">{{ plante1 }}</a>
+    </div>
+    <div class="plante">
+        <div class="gauge" id="g2">Humidité
+            <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+            </div>
+        </div>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/plante/2" style="width:220px;">{{ plante2 }}</a>
+    </div>
+    <div class="plante">
+        <div class="gauge" id="g3">Humidité
+            <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+            </div>
+        </div>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/plante/3" style="width:220px;">{{ plante3 }}</a>
+    </div>
+    <div class="plante">
+        <div class="gauge" id="g4">Humidité
+            <div class="gauge__body">
+                <div class="gauge__fill"></div>
+                <div class="gauge__cover"></div>
+            </div>
+        </div>
+        <a class="btn btn-primary btn-lg" href="http://127.0.0.1:5000/plante/4" style="width:220px;">{{ plante4 }}</a>
+    </div>
+    <a class="btn btn-primary btn-lg historique" href="http://127.0.0.1:5000/historique"> Historique </a>
+    <a class="btn btn-primary btn-lg historique" href="http://127.0.0.1:5000/configurations"> Configurations </a>
+</div>
+
+<script type="text/javascript">
+    const gaugeElement1 = document.getElementById("g1");
+    const gaugeElement2 = document.getElementById("g2");
+    const gaugeElement3 = document.getElementById("g3");
+    const gaugeElement4 = document.getElementById("g4");
+
+
+    function setGaugeValue(gauge, value) {
+        if (value < 0 || value > 1) {
+            return;
+        }
+
+        gauge.querySelector(".gauge__fill").style.transform = `rotate(${
+    value / 2
+  }turn)`;
+        gauge.querySelector(".gauge__cover").textContent = `${Math.round(
+    value * 100
+  )}%`;
+    }
+
+    setGaugeValue(gaugeElement1, 1-( {{ humidite1 }} / 100) );
+    setGaugeValue(gaugeElement2, 1-( {{ humidite2 }} / 100) );
+    setGaugeValue(gaugeElement3, 1-( {{ humidite3 }} / 100) );
+    setGaugeValue(gaugeElement4, 1-( {{ humidite4 }} / 100) );
+
+</script>
+
+{% endblock %}
