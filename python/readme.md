@@ -1,8 +1,9 @@
 # :axe: Python projects
 
-Here you will find some of my Python work. I've mixed algorithms and Internet of things.
+> My favorite projects are Portfolio (react.js) and appContact (mongoose).
 
-Look at my **smartGreenHouse** project. It's one of my favorites! 
+
+Here you will find some of my Python work. I've mixed algorithms and Internet of things.
 
 -- 
 
