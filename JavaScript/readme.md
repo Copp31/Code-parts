@@ -1,6 +1,6 @@
 # :pick: JavaScript projects
 
-> My favorite projects : Portfolio (react.js) and appContact (mongoose). 
+>My favorite projects are Portfolio (react.js) and appContact (mongoose).
 
 Here you will find some of my JS HTML and CSS projects. 
 
