@@ -1,6 +1,6 @@
 # :axe: Python projects
 
-> My favorite projects are Portfolio (react.js) and appContact (mongoose).
+> My favorite projects are SmartGreenHouse (Arduino, Raspberry Pi, JS), the MazeGenerator(Algorithm), and the TicTacToe (Experta).
 
 
 Here you will find some of my Python work. I've mixed algorithms and Internet of things.
