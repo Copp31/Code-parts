@@ -1,4 +1,4 @@
-# :atom: JavaScript projects
+# :pick: JavaScript projects
 
 Here you will find some of my JS HTML and CSS projects. 
 
