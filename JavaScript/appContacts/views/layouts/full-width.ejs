@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/c2493b3893.js" crossorigin="anonymous"></script>
+
+        <title><%- titre %></title>
+
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    </head>
+<body>
+
+    <div class="container">
+        <div class = "menu-wrap">
+            <%- include('../partial/header.ejs')%>
+        </div>
+
+        <div>
+                <!-- contenu spécifique aux pages -->
+                <%- body %>
+        </div>
+        
+    </div>
+    <footer>Coppélia & Ramzi</footer>
+
+    
+<script src='..\interactions\interaction.js'></script>
+
+
+<script>
+
+const buttonaccueil = document.getElementById('repertoire').addEventListener('click', async(req, res) => {
+    window.location.replace('/')
+  
+    console.log('bouton répertoire cliqué');
+});
+
+const buttonajouter = document.getElementById('add_button').addEventListener('click', async(req, res) => {
+    window.location.replace('/add')
+
+    console.log('bouton ajouté cliqué');
+});
+
+    
+</script>
+</html>
+
+

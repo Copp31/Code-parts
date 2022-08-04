@@ -1,0 +1,268 @@
+/* Style frame **************************************************************/
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 600;
+    margin: 0;
+    color: whitesmoke;
+    height: 20vh;
+    background-color: black;
+}
+
+.container{
+    max-width: 439px;
+    min-height: 80vw;
+    margin: auto;
+    padding-top: 150px;
+    background-color:var( --overlay-color);
+    overflow:hidden;
+}
+
+.repertoire {
+    padding-left: 2em;
+    padding-right: 4em;
+    font-size: 20px;
+    color: black;
+}
+
+.contact-recherche{
+    font-size: 1.2em;
+    padding: 0.3em;
+    border-radius: 100px;
+    border: 1px solid #fff;
+    outline: none;
+}
+
+i{
+    font-size: 1.5em;
+}
+
+footer{
+    display:flex;
+    align-items: center;
+    max-width: 439px;
+    color : #FFF;
+    font-size : 0.8em;
+    background: black;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    margin: 10px;
+}
+
+
+/* Style Hamburger **************************************************************/
+/* ressource: https://www.youtube.com/watch?v=DZg6UfS5zYg */
+
+
+:root{
+    --primary-color: #91BFF9;
+    --overlay-color: black;
+    --menu-speed: 0.75s;
+}
+
+
+.header {
+    display:flex;
+    color : #FFF;
+    background: var(--primary-color);
+    padding: 2em 2em;
+    padding-left: 6em;
+    text-align: right;
+    align-items: center;
+    max-width:max-content;
+    position:relative;
+}
+
+
+.menu-wrap{
+    position: fixed;
+    top: 0;
+    z-index:1;
+}
+
+.toggler{
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:2;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    opacity:0;
+}
+
+.hamburger{
+    position:absolute;
+    top:0;
+    z-index:1;
+    width: 40px;
+    height: 60px;
+    padding: 1rem;
+    background: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger > div{
+    position:relative;
+    width:100%;
+    height:2px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease ;
+}
+
+.hamburger > div:before,
+.hamburger > div:after {
+    content:'';
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+}
+
+.hamburger > div:after{
+    top:10px;
+}
+
+.toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+}
+
+.toggler:checked + .hamburger > div:before,
+.toggler:checked + .hamburger > div:after {
+    top:0;
+    transform: rotate(90deg);
+}
+
+.menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+}
+
+.menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+}
+
+.menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.menu {
+    position: fixed;
+    top:0;
+    max-width: 428px;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu > div{
+    background: #91BFF9;
+    width: 342px;
+/*     width: 200vw; */
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+}
+
+.menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-width: 100vh;
+    opacity: 0;
+    transition: opacity 0.6s ease;
+}
+
+.contact-recherche {
+    font-size: medium;
+}
+
+.barreRecherche > i {
+    color: #D4E6F1;    
+}
+
+#add_button{
+    color: #115714;
+}
+
+#return{
+    text-align: center;
+    color: #115714;
+}
+
+/* Style contacts **************************************************************/
+
+.style-carte {
+    text-align: center;
+    padding-top: 1em;
+}
+
+.nomprenom-contact{
+    font-size: 1.2em;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+hr{
+    border: 0.1px solid whitesmoke;
+}
+
+.containerPrincipal{
+    list-style: none;
+}
+
+.contact-individuel{
+    text-align:center;
+    padding-top: 0.7em;
+}
+
+#photo-contact{
+    font-size: 8em;
+}
+
+#profil-solo{
+    font-size: 5em;
+    color: #91BFF9;
+}
+
+#deleteButton{
+    color:#FF6666 ;
+}
+
+.info_contacts{
+    text-align: left;
+    padding-left: 1em;
+}
+
+/* Style add_contacts **************************************************************/
+
+#photo-contact-nouveau{
+    padding-bottom: 40px;
+    font-size: 8em;
+}
+
+.titreContact{
+    font-size: 25px;
+}
+
+input {
+    width: 70%;
+  }

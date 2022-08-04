@@ -1,0 +1,110 @@
+<!-- Accueil -->
+
+<div class = "liste">
+    <ul class = "containerPrincipal">
+    </ul>
+</div>
+
+<script>
+// ********************************************** Constantes
+const urlRep = 'http://localhost:4200/personnes'    
+const urlSolo = 'http://localhost:4200/personne'
+const repList = document.querySelector('.containerPrincipal')
+let output = ''
+let profil = ''
+
+
+// ********************************************** Répertoire représentant les informations de la DB
+
+fetch(urlRep)
+  .then(res => res.json())
+  .then(data => renderPosts(data))
+
+
+// ********************************************** Bouton de la page principale
+
+repList.addEventListener('click', (e) =>{
+  e.preventDefault()
+  let deleteButtonPressed = e.target.id == 'deleteButton'
+  let profilButtonPressed = e.target.id == 'profil-solo'
+
+  let id = e.target.parentElement.dataset.id
+
+
+// ***** bouton pour effacer une info de la base de donnée
+  if (deleteButtonPressed){
+    fetch(`${urlSolo}/${id}`,{
+      method: 'DELETE',
+    })
+      .then(res => res.json())
+      .then(() => location.reload())
+  }
+
+
+// ***** bouton pour rediriger vers page profil individuel
+  if (profilButtonPressed)
+    fetch(`${urlSolo}/${id}`)
+      .then(res => res.json())
+      .then(data => renduProfil(data))
+        
+// ***** bouton retour en arrière vers répertoire à partir de profil individuel
+  const buttonReturn = document.getElementById('return').addEventListener('click', async(req, res) => {
+    window.location.replace('/')
+    console.log('bouton retour cliqué')
+})
+})
+
+
+// ********************************************** Rendu des pages 'réperoire' & 'profil individuel'
+
+// **** rendu répertoire
+const renderPosts = (posts) => {
+  posts.forEach(post =>{
+    output += `
+      <br>
+        <div class = "style-carte" data-id=${post._id}>
+            <i id = "profil-solo" class="fas fa-user-circle"></i>
+            <p id = "output" class= "nomprenom-contact"> ${post.prenom} ${post.nom}</p>
+            <p class= "entreprise-contact">${post.entreprise} </p>
+            <i id = "deleteButton" class="fas fa-user-times"></i>
+        </div>
+      <br>
+    `
+  })
+    repList.innerHTML = output
+}
+
+// **** rendu profil individuel
+const renduProfil = post =>{
+  profil +=`
+    <ul class = "contact-individuel">
+    <br>
+        <i id = "photo-contact" class="fas fa-user-circle"></i>
+        <div>
+            <p class= "nomprenom-contact">${post.prenom} ${post.nom}</p>
+            <p class= "entreprise-contact">${post.entreprise}</p>
+            <div class = "info_contacts">
+                <div class = "info-telephone">
+                    <i class="fas fa-phone-alt"></i>
+                    <p class= "telephone"> ${post.telephone} </p>
+                    <p class= "mobile-contact">${post.mobile}</p>
+                </div>
+                <div class = "info-location">
+                    <i class="fas fa-envelope"></i>
+                    <p class= "email-contact">${post.email}</p>
+                    <p class= "adresse-contact">${post.adresse}</p>
+                </div>
+                <br>
+            </div>
+            <i id = "return" class="fas fa-undo-alt"></i> 
+        </div>
+    </ul>
+      ` 
+    repList.innerHTML = profil
+  }
+
+
+
+
+</script>
+

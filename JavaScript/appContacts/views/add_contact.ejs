@@ -1,0 +1,68 @@
+<!-- Page concernant l'ajout de contact à la Base de données Mongoose  -->
+
+
+<div>
+    <ul class = "contact-individuel">
+        <p class = "titreContact"> Créer contact</p>
+            <i id = "photo-contact-nouveau" class="fas fa-user-circle"></i>
+            <div>
+                <form class = "FormNouveauContact">
+                    <input type="text" placeholder="nom" id="nomContact">
+                    <input type="text" placeholder="prenom" id="prenomContact">
+                    <input type="text" placeholder="entreprise" id="entrepriseContact">
+                    <input type="text" placeholder="telephone" id="telephoneContact">
+                    <input type="text" placeholder="mobile" id="MobileContact">
+                    <input type="text" placeholder="email" id="emailContact">
+                    <input type="text" placeholder="adresse" id="adresseContact">
+                    <br>
+                    <br>
+                    <button type="submit">Ajouter</button>
+                </form>
+            </div>
+    </ul>
+</div>
+
+<script>
+
+// ***************** Constantes 
+
+const url = 'http://localhost:4200/personne'
+const FormNouveauContact = document.querySelector('.FormNouveauContact')
+
+const NomValue = document.getElementById('nomContact')
+const PrenomValue = document.getElementById('prenomContact')
+const EntrepriseValue = document.getElementById('entrepriseContact')
+const TelephoneValue = document.getElementById('telephoneContact')
+const MobileValue = document.getElementById('MobileContact')
+const EmailValue = document.getElementById('emailContact')
+const AdresseValue = document.getElementById('adresseContact')
+
+
+// ***************** Ajout à la base de donnée suite au 'submit' 
+
+FormNouveauContact.addEventListener('submit', (e) =>{
+    e.preventDefault()
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            nom: NomValue.value,
+            prenom: PrenomValue.value,
+            entreprise: EntrepriseValue.value,
+            telephone: TelephoneValue.value,
+            mobile: MobileValue.value,
+            email: EmailValue.value,
+            adresse: AdresseValue.value
+        })
+    })
+        .then(res =>{
+            window.location.href = '/'
+        })
+})    
+
+</script>
+    
+    
