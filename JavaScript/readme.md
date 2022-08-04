@@ -2,7 +2,7 @@
 
 Here you will find some of my JS HTML and CSS projects. 
 
-Look at my portfolio folder to see my favorite react app.
+Look at my **portfolio** folder to see my favorite react app.
 
 -- 
 
