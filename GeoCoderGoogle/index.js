@@ -1,5 +1,3 @@
-/* Bonne fonction GeoAPI en mode fonction */
-
 const address = "5099 17e avenue montréal";
 function geocode() {
   if (address) {
