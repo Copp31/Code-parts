@@ -1,8 +1,8 @@
 # :pick: JavaScript projects
 
-Here you will find some of my JS HTML and CSS projects. 
+> My favorite projects : Portfolio (react.js) and appContact (mongoose). 
 
-Look at my **portfolio** folder to see my favorite react app.
+Here you will find some of my JS HTML and CSS projects. 
 
 -- 
 
