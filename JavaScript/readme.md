@@ -4,7 +4,7 @@
 
 Here you will find some of my JS HTML and CSS projects. 
 
--- 
+---
 
 ### [Geocoder](https://github.com/Copp31/Coding/tree/main/JavaScript/GeoCoderGoogle) 
 
