@@ -1,6 +1,6 @@
 # :pick: JavaScript projects
 
-> My favorite projects are [Portfolio](https://github.com/Copp31/Portfolio) and [appContacts](https://github.com/Copp31/Coding/tree/main/JavaScript/appContacts).
+> My favorite projects are [Portfolio](https://github.com/Copp31/Portfolio) and [AppContacts](https://github.com/Copp31/Coding/tree/main/JavaScript/appContacts).
 
 Here you will find some of my JS HTML and CSS projects. 
 
