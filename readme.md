@@ -1,6 +1,7 @@
 # :nesting_dolls:  Welcome to my projects section
 
-> I code mainly in Python, JavaScript, CSS, and HTML. I've been working with C++ but only with my Arduino projects. <br>
+> I code mainly in Python, JavaScript, CSS, and HTML. I've been working with C++ but only with my Arduino projects. <br/>
+> <br/>
 > In this Repository, I've organized my work by the primary language, but if you want to see my favorite, read this readme! 
 
 # JavaScript
