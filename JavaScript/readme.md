@@ -6,23 +6,31 @@ Here you will find some of my JS HTML and CSS projects.
 
 ---
 
+### [Portfolio](https://github.com/Copp31/Portfolio)
+
+In this folder, you will find my portfolio 2022. I've coded it with React.js.
+
+Here's the website
+
+---
+
 ### [Geocoder](https://github.com/Copp31/Coding/tree/main/JavaScript/GeoCoderGoogle) 
 
 Small function using the Google Geocoder. Easy to insert in any project.
 
---
+---
 
 ### [AppContacts](https://github.com/Copp31/Coding/tree/main/JavaScript/appContacts) 
 
 Simple mobile app to add, erase and modify your contact. This app uses Mongoose to stack the data.
 
---
+---
 
 ### [GifGenerator](https://github.com/Copp31/Coding/tree/main/JavaScript/gifGenerator) 
 
 Website using API to search any gif or stickers for your project.
 
--- 
+--- 
 
 ### [PixelArtMaker](https://github.com/Copp31/Coding/tree/main/JavaScript/pixelArtMaker) 
 
