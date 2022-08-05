@@ -6,7 +6,6 @@
 Here you will find some of my Python work. I've mixed algorithms and Internet of things.
 
 ---
---- 
 
 ### [AlarmSystem](https://github.com/Copp31/Coding/tree/main/python/alarmSystem)
 
