@@ -8,10 +8,10 @@
 
 I use JavaScript to build websites, applications, and animations. I can work with the library React.js.
 <br/>
-My favorites JS projects are my **Portfolio (react.js) and appContact (mongoose)**. Check those two! 
+My favorite JS projects are my **Portfolio (react.js) and appContact (mongoose)**. Check those two! 
 
 # Python
 
-I code in Python for Internet of things and algorithms projects. I've also been using this language for rooting websites, but I genuinely prefer JS. 
+I code in Python for Internet of things and algorithms projects. I've also used this language for rooting websites, but I prefer JS. 
 <br/>
 My favorite project is the **SmartGreenHouse (Arduino, Raspberry Pi, JS), the MazeGenerator(Algorithm), and the TicTacToe (Experta)**.
