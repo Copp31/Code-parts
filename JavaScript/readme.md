@@ -1,6 +1,6 @@
 # :pick: JavaScript projects
 
-> My favorite projects are Portfolio [Duck Duck Go](https://duckduckgo.com). (react.js) and appContacts (mongoose).
+> My favorite projects are [Portfolio](https://github.com/Copp31/Portfolio). (react.js) and appContacts (mongoose).
 
 Here you will find some of my JS HTML and CSS projects. 
 
